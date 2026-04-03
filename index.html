@@ -3,182 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài Tập Tổng Hợp Lập Trình Web</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f4f7f6;
-        }
-        header {
-            text-align: center;
-            padding: 20px 0;
-            border-bottom: 2px solid #007bff;
-            margin-bottom: 30px;
-        }
-        .question-block {
-            background: #fff;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #007bff;
-            border-left: 5px solid #007bff;
-            padding-left: 15px;
-            margin-top: 0;
-        }
-        h3 {
-            color: #444;
-            margin-top: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 12px;
-            text-align: left;
-        }
-        th {
-            background-color: #f8f9fa;
-        }
-        code {
-            background-color: #eee;
-            padding: 2px 5px;
-            border-radius: 4px;
-            font-family: 'Courier New', Courier, monospace;
-        }
-        pre {
-            background: #272822;
-            color: #f8f8f2;
-            padding: 15px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-        .note {
-            background: #fff3cd;
-            padding: 15px;
-            border-left: 5px solid #ffc107;
-            margin: 15px 0;
-        }
-    </style>
+    <title>Trang chủ - 710-MSSV</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <header>
-        <h1>TỔNG HỢP KIẾN THỨC LẬP TRÌNH WEB</h1>
+        <h1>Danh sách bài tập Web</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="bai01.html">Bài tập 01</a></li>
+                <li><a href="bai02.html">Bài tập 02</a></li>
+                <li><a href="bai03.html">Bài tập 03</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="question-block">
-        <h2>1. CSS Position: Relative vs. Absolute</h2>
-        <p>Sự khác biệt cốt lõi nằm ở <strong>điểm tham chiếu</strong> và <strong>vị trí của phần tử trong luồng văn bản (document flow)</strong>.</p>
-        
-        <ul>
-            <li><strong>Relative:</strong> Phần tử vẫn nằm trong luồng văn bản. Việc dịch chuyển chỉ thay đổi vị trí hiển thị so với vị trí gốc của chính nó.</li>
-            <li><strong>Absolute:</strong> Phần tử bị nhấc ra khỏi luồng văn bản, định vị dựa trên tổ tiên gần nhất có thuộc tính <code>position</code> (khác static).</li>
-        </ul>
+    <main>
+        <h2>Đề thi Kết Thúc HP</h2>
+        <img src="images/avatar.jpg" alt="Avatar" width="150">
+    </main>
 
-        <h3>Tình huống Responsive:</h3>
-        <p>Tạo một "Card" sản phẩm với nhãn "Hot Sale" ở góc. Set <code>position: relative</code> cho Card và <code>position: absolute</code> cho nhãn. Điều này giúp nhãn luôn cố định ở góc Card bất kể kích thước màn hình thay đổi.</p>
-        
-        <div class="note">
-            <strong>Lưu ý Deploy:</strong> Cần sử dụng đơn vị linh hoạt như <code>%</code> hoặc <code>rem</code> để tránh việc phần tử absolute bị đè lấp nội dung khác trên thiết bị di động.
-        </div>
-    </section>
-
-    <section class="question-block">
-        <h2>2. Quy trình Đăng ký Domain & Hosting</h2>
-        <h3>Các bước thực hiện:</h3>
-        <ol>
-            <li><strong>Đăng ký Domain:</strong> Mua tên miền tại các nhà cung cấp uy tín.</li>
-            <li><strong>Thuê Hosting:</strong> Chọn nơi lưu trữ phù hợp (Shared Host, VPS, hoặc Cloud).</li>
-            <li><strong>Cấu hình DNS:</strong> Trỏ bản ghi (A Record/CNAME) từ Domain về IP của Hosting.</li>
-        </ol>
-
-        <p><strong>Vai trò của DNS:</strong> Đóng vai trò "thông dịch viên", chuyển đổi tên miền (ví dụ: <code>mysite.com</code>) sang địa chỉ IP của máy chủ.</p>
-
-        <h3>Công cụ hỗ trợ Deploy nhanh:</h3>
-        <ul>
-            <li><strong>GitHub Pages:</strong> Miễn phí, lý tưởng cho các trang web tĩnh trực tiếp từ repository.</li>
-            <li><strong>Netlify:</strong> Hỗ trợ CI/CD tự động, tối ưu hóa hiệu suất và bảo mật HTTPS chỉ với vài cú click.</li>
-        </ul>
-    </section>
-
-    <section class="question-block">
-        <h2>3. So sánh Let, Const và Var</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Đặc tính</th>
-                    <th><code>var</code></th>
-                    <th><code>let</code></th>
-                    <th><code>const</code></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Scope</td>
-                    <td>Function scope</td>
-                    <td>Block scope <code>{}</code></td>
-                    <td>Block scope <code>{}</code></td>
-                </tr>
-                <tr>
-                    <td>Hoisting</td>
-                    <td>Có (giá trị <code>undefined</code>)</td>
-                    <td>Có (nằm trong TDZ)</td>
-                    <td>Có (nằm trong TDZ)</td>
-                </tr>
-                <tr>
-                    <td>Gán lại</td>
-                    <td>Có</td>
-                    <td>Có</td>
-                    <td>Không</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h3>Ví dụ minh họa & Debug:</h3>
-<pre>
-if (true) {
-    var a = 10;
-    let b = 20;
-}
-console.log(a); // 10
-console.log(b); // Lỗi: ReferenceError: b is not defined
-</pre>
-        <p><strong>Cách Debug:</strong> Sử dụng tab <strong>Sources</strong> trong Chrome DevTools, đặt <em>Breakpoint</em> để theo dõi biến trong mục <em>Scope</em> ở cột bên phải.</p>
-    </section>
-
-    <section class="question-block">
-        <h2>4. Event Delegation trong JavaScript</h2>
-        <p><strong>Khái niệm:</strong> Là kỹ thuật gán sự kiện cho phần tử cha thay vì từng phần tử con đơn lẻ, tận dụng cơ chế <em>Event Bubbling</em> (sự kiện nổi bọt).</p>
-
-        <h3>Ví dụ Dynamic List:</h3>
-<pre>
-document.querySelector('#myList').addEventListener('click', function(e) {
-    if(e.target && e.target.nodeName === "LI") {
-        alert("Bạn đã click vào: " + e.target.innerText);
-    }
-});
-</pre>
-
-        <h3>Lợi ích tối ưu:</h3>
-        <ul>
-            <li><strong>Bộ nhớ:</strong> Giảm số lượng listener cần khởi tạo.</li>
-            <li><strong>Tính linh hoạt:</strong> Tự động áp dụng cho cả các phần tử con được thêm vào sau này bằng JavaScript.</li>
-            <li><strong>Tốc độ:</strong> Website phản hồi nhanh hơn do giảm tải xử lý DOM.</li>
-        </ul>
-    </section>
-
+    <script src="js/script.js"></script>
 </body>
 </html>

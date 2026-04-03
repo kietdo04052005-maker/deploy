@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa Hàng Công Nghệ - KIET</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        
+        .search-container input {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px 20px;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .search-container input:focus {
+            border-color: #007bff;
+        }
+
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        
+        .product-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            color: #007bff;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Danh Sách Sản Phẩm</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Nhập tên sản phẩm cần tìm...">
+        </div>
+    </header>
+
+    <main id="productGrid" class="product-grid">
+        </main>
+
+    <script>
+        
+        
+        
+        const products = [
+            { id: 1, name: "iPhone 15 Pro", price: "28.990.000đ", image: "https://via.placeholder.com/150" },
+            { id: 2, name: "Samsung Galaxy S24 Ultra", price: "29.500.000đ", image: "https://via.placeholder.com/150" },
+            { id: 3, name: "MacBook Air M3", price: "27.490.000đ", image: "https://via.placeholder.com/150" },
+            { id: 4, name: "Tai nghe Sony WH-1000XM5", price: "6.500.000đ", image: "https://via.placeholder.com/150" },
+            { id: 5, name: "Apple Watch Series 9", price: "10.200.000đ", image: "https://via.placeholder.com/150" },
+            { id: 6, name: "Bàn phím cơ Logitech G Pro", price: "2.800.000đ", image: "https://via.placeholder.com/150" },
+        ];
+
+        const productGrid = document.getElementById('productGrid');
+        const searchInput = document.getElementById('searchInput');
+
+        function displayProducts(productsArray) {
+            productGrid.innerHTML = ""; 
+            
+            if (productsArray.length === 0) {
+                productGrid.innerHTML = "<p style='grid-column: 1/-1; text-align: center;'>Không tìm thấy sản phẩm nào.</p>";
+                return;
+            }
+
+            productsArray.forEach(product => {
+                const productHTML = `
+                    <div class="product-card">
+                        <img src="${product.image}" alt="${product.name}">
+                        <h3>${product.name}</h3>
+                        <p>${product.price}</p>
+                    </div>
+                `;

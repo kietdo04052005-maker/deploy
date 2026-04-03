@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Đỗ Bá Kiệt</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            
+            background: linear-gradient(135deg, #1e3a8a 0%, #581c87 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .profile-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        
+        .profile-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .profile-header h1 {
+            color: #1e293b;
+            font-size: 28px;
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+
+        
+        .profile-header h1::after {
+            content: "";
+            display: block;
+            width: 50%;
+            height: 4px;
+            background: #7c3aed;
+            margin: 8px auto 0;
+            border-radius: 10px;
+        }
+
+        .info-group {
+            margin-bottom: 25px;
+            text-align: left;
+            border-left: 4px solid #7c3aed;
+            padding-left: 15px;
+        }
+
+        .info-group p {
+            font-size: 17px;
+            color: #475569;
+            line-height: 1.8;
+        }
+
+        .label {
+            font-weight: 800;
+            color: #1e293b;
+            margin-right: 5px;
+        }
+
+        .hobbies-section {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .hobbies-list {
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+       
+        .tag {
+            background: #f1f5f9;
+            color: #4338ca;
+            padding: 8px 18px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .tag:hover {
+            background: #4338ca;
+            color: #ffffff;
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(67, 56, 202, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <div class="profile-header">
+            <h1>Thông Tin Cá Nhân</h1>
+        </div>
+        
+        <div class="info-group">
+            <p><span class="label">Họ và tên:</span> Đỗ Bá Kiệt</p>
+            <p><span class="label">Ngành học:</span> Công nghệ thông tin</p>
+        </div>
+
+        <div class="hobbies-section">
+            <span class="label">Sở thích:</span>
+            <div class="hobbies-list">
+                <span class="tag">Lập trình</span>
+                <span class="tag">Đá Bóng</span>
+                <span class="tag">Gym</span>
+                <span class="tag">Grooming</span>
+                <span class="tag">Ngoại ngữ</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
